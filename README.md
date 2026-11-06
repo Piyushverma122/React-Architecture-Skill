@@ -41,6 +41,16 @@ The default scope is `user`. To share the plugin with a team through the repo's 
 
 Restart Claude Code (or run `/reload-plugins`), then check that it loaded with `/plugin list`.
 
+## Installation via Skills CLI
+
+Alternatively, install only the skill with the [Skills CLI](https://skills.sh/docs/cli):
+
+```bash
+npx skills add Piyushverma122/React-Architecture-Skill --skill react-feature-architecture -a claude-code
+```
+
+This copies the skill into your project's `.claude/skills/` folder. Invoke it as `/react-feature-architecture`. Use either this method or the plugin install above, not both, or the skill will appear twice.
+
 ## Use
 
 The skill triggers automatically from requests like:
