@@ -1,0 +1,17 @@
+{
+  "name": "piyushverma122-plugins",
+  "description": "Claude Code plugins by Piyush Verma.",
+  "owner": {
+    "name": "Piyush Verma",
+    "url": "https://github.com/Piyushverma122"
+  },
+  "plugins": [
+    {
+      "name": "react-architecture",
+      "source": "./",
+      "description": "Feature-based React architecture skill: setup, extend, auth with token refresh, RTK Query, routing, lazy loading, and verification workflow.",
+      "category": "development",
+      "tags": ["react", "frontend", "architecture", "redux", "authentication"]
+    }
+  ]
+}

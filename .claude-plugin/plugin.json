@@ -1,0 +1,14 @@
+{
+  "name": "react-architecture",
+  "displayName": "React Feature Architecture",
+  "version": "1.0.0",
+  "description": "Set up, complete, or extend Vite + React apps (JS or TS) with a feature-based architecture: Tailwind v4, shadcn/ui, Redux Toolkit + RTK Query with single-flight token refresh, session restore, guarded routes with safe redirects, lazy routes with retry, react-hook-form + zod, sonner, and i18next.",
+  "author": {
+    "name": "Piyush Verma",
+    "url": "https://github.com/Piyushverma122"
+  },
+  "homepage": "https://github.com/Piyushverma122/React-Architecture-Skill",
+  "repository": "https://github.com/Piyushverma122/React-Architecture-Skill",
+  "license": "MIT",
+  "keywords": ["react", "vite", "architecture", "redux-toolkit", "rtk-query", "authentication", "tailwind", "shadcn", "typescript"]
+}
