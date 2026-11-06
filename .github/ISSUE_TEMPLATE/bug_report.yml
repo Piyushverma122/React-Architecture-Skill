@@ -1,0 +1,44 @@
+name: Bug report
+description: Something in the skill, a template, or the installation doesn't work
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Please don't include tokens, passwords, or private URLs. For security problems, see SECURITY.md instead of filing a public issue.
+  - type: dropdown
+    id: install
+    attributes:
+      label: How did you install it?
+      options:
+        - Claude Code plugin marketplace
+        - Skills CLI (npx skills add)
+        - Copied the files manually
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you ask the skill to do, and what went wrong?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment
+      description: Claude Code version, OS, Node version, package manager, JS or TS, and React / Vite versions.
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Relevant output
+      description: Error messages or command output (remove secrets).
+      render: shell

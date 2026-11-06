@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" width="1280" height="640" role="img" aria-labelledby="t">
+  <title id="t">React-Architecture-Skill: feature-based React architecture for Claude Code</title>
+  <style>
+    text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .m { font-family: ui-monospace, Consolas, Menlo, monospace; }
+  </style>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1220"/><stop offset="1" stop-color="#16233f"/></linearGradient>
+  </defs>
+  <rect width="1280" height="640" fill="url(#bg)"/>
+  <rect x="0" y="0" width="14" height="640" fill="#38bdf8"/>
+
+  <text x="80" y="170" font-size="26" font-weight="600" fill="#38bdf8">Claude Code skill</text>
+  <text x="80" y="260" font-size="76" font-weight="800" fill="#f8fafc">React Feature</text>
+  <text x="80" y="345" font-size="76" font-weight="800" fill="#f8fafc">Architecture</text>
+  <text x="80" y="410" font-size="30" fill="#cbd5e1">Inspect. Propose. Approve. Build. Verify.</text>
+  <text x="80" y="470" font-size="24" fill="#94a3b8">Vite + React · JavaScript &amp; TypeScript · RTK Query · token refresh</text>
+
+  <rect x="80" y="520" width="1120" height="64" rx="10" fill="#0f172a" stroke="#334155"/>
+  <text x="104" y="560" font-size="24" class="m" fill="#e2e8f0">/plugin marketplace add Piyushverma122/React-Architecture-Skill</text>
+
+  <g transform="translate(840 110)" stroke="#38bdf8" stroke-width="3" fill="none">
+    <rect x="0" y="0" width="340" height="60" rx="8" fill="#13213b"/>
+    <rect x="0" y="90" width="150" height="150" rx="8" fill="#13213b"/>
+    <rect x="190" y="90" width="150" height="150" rx="8" fill="#13213b"/>
+    <path d="M170 60 L170 75 M75 75 L265 75 M75 75 L75 90 M265 75 L265 90"/>
+    <text x="24" y="40" font-size="22" fill="#e2e8f0" stroke="none">app / routes</text>
+    <text x="24" y="135" font-size="22" fill="#e2e8f0" stroke="none">features/</text>
+    <text x="214" y="135" font-size="22" fill="#e2e8f0" stroke="none">api/</text>
+    <text x="24" y="170" font-size="17" fill="#94a3b8" stroke="none">pages · slices</text>
+    <text x="214" y="170" font-size="17" fill="#94a3b8" stroke="none">3 files</text>
+  </g>
+</svg>

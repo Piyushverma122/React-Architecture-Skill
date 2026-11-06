@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" width="960" height="520" role="img" aria-labelledby="t d">
+  <title id="t">Architecture overview</title>
+  <desc id="d">Import direction between layers: features and routes use shared, components, utils and the api layer; api never imports features or shared; the store registers feature slices and the api reducer.</desc>
+  <style>
+    text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #0f172a; }
+    .box { fill: #ffffff; stroke: #94a3b8; stroke-width: 1.5; }
+    .feat { fill: #e0f2fe; stroke: #0284c7; stroke-width: 1.5; }
+    .api { fill: #fef3c7; stroke: #d97706; stroke-width: 1.5; }
+    .wire { fill: #ede9fe; stroke: #7c3aed; stroke-width: 1.5; }
+    .h { font-size: 15px; font-weight: 700; }
+    .s { font-size: 12px; fill: #334155; }
+    .t { font-size: 20px; font-weight: 700; }
+    .arrow { stroke: #475569; stroke-width: 1.6; fill: none; marker-end: url(#a); }
+    .no { stroke: #dc2626; stroke-width: 1.6; stroke-dasharray: 5 4; fill: none; marker-end: url(#r); }
+  </style>
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#475569"/></marker>
+    <marker id="r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#dc2626"/></marker>
+  </defs>
+  <rect width="960" height="520" rx="12" fill="#f8fafc"/>
+  <text x="30" y="40" class="t">Feature-based architecture: who may import whom</text>
+
+  <rect x="30" y="70" width="900" height="64" rx="8" class="wire"/>
+  <text x="50" y="97" class="h">main / App / app/store</text>
+  <text x="50" y="118" class="s">Providers (Redux, theme, router, toaster) · registers the baseApi reducer + middleware and each feature slice</text>
+
+  <rect x="30" y="170" width="430" height="150" rx="8" class="feat"/>
+  <text x="50" y="198" class="h">features/&lt;name&gt;/</text>
+  <text x="50" y="222" class="s">&lt;name&gt;Api (baseApi.injectEndpoints) · pages · components</text>
+  <text x="50" y="242" class="s">schemas · store slice (client state only) · locales</text>
+  <text x="50" y="270" class="s">Server data lives in RTK Query, not in slices.</text>
+  <text x="50" y="290" class="s">Two features never import each other.</text>
+
+  <rect x="500" y="170" width="430" height="64" rx="8" class="box"/>
+  <text x="520" y="197" class="h">routes/ · layout/</text>
+  <text x="520" y="218" class="s">Lazy pages via lazyWithRetry · PrivateRoute / PublicRoute</text>
+
+  <rect x="500" y="256" width="430" height="64" rx="8" class="box"/>
+  <text x="520" y="283" class="h">shared/ · components/ · hooks/ · utils/ · lib/</text>
+  <text x="520" y="304" class="s">shared/ is created only when a 2nd feature needs something</text>
+
+  <rect x="30" y="376" width="430" height="110" rx="8" class="api"/>
+  <text x="50" y="404" class="h">api/ (exactly 3 files)</text>
+  <text x="50" y="428" class="s">responseAdapter: the only file that knows backend shapes</text>
+  <text x="50" y="448" class="s">tokenRefresh: single-flight refresh · baseApi: baseQueryWithReauth</text>
+  <text x="50" y="470" class="s">Never imports features/ or shared/</text>
+
+  <rect x="500" y="376" width="430" height="110" rx="8" class="box"/>
+  <text x="520" y="404" class="h">config/env: the only reader of import.meta.env</text>
+  <text x="520" y="428" class="s">constants/ (api paths, auth transport, routes, storage keys)</text>
+  <text x="520" y="448" class="s">Imported by anything; imports nothing from the app.</text>
+
+  <path class="arrow" d="M245 134 L245 170"/>
+  <path class="arrow" d="M460 215 L500 215"/>
+  <path class="arrow" d="M460 285 L500 285"/>
+  <path class="arrow" d="M245 320 L245 376"/>
+  <path class="no" d="M120 376 L120 340 L90 340 L90 322"/>
+  <text x="130" y="352" class="s" fill="#dc2626" style="fill:#dc2626">api/ → features/ is forbidden</text>
+  <path class="arrow" d="M715 134 L715 170"/>
+  <path class="arrow" d="M715 234 L715 256"/>
+</svg>

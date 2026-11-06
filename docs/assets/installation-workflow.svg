@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 300" width="960" height="300" role="img" aria-labelledby="t d">
+  <title id="t">Installation workflow</title>
+  <desc id="d">Two ways to install: the Claude Code plugin marketplace (add marketplace, install plugin, invoke /react-architecture:react-feature-architecture) or the Skills CLI (npx skills add, invoke /react-feature-architecture).</desc>
+  <style>
+    text { font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; fill: #0f172a; }
+    .box { fill: #ffffff; stroke: #94a3b8; stroke-width: 1.5; }
+    .a { fill: #e0f2fe; stroke: #0284c7; stroke-width: 1.5; }
+    .b { fill: #dcfce7; stroke: #16a34a; stroke-width: 1.5; }
+    .h { font-size: 14px; font-weight: 700; }
+    .m { font-family: ui-monospace, Consolas, Menlo, monospace; font-size: 11px; fill: #1e293b; }
+    .s { font-size: 12px; fill: #334155; }
+    .arrow { stroke: #475569; stroke-width: 1.6; fill: none; marker-end: url(#a); }
+  </style>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#475569"/></marker></defs>
+  <rect width="960" height="300" rx="12" fill="#f8fafc"/>
+
+  <text x="30" y="36" class="h" style="font-size:16px">A. Claude Code plugin marketplace</text>
+  <rect x="30" y="50" width="270" height="70" rx="8" class="a"/>
+  <text x="44" y="74" class="h">1. Add the marketplace</text>
+  <text x="44" y="98" class="m">/plugin marketplace add</text>
+  <text x="44" y="112" class="m">Piyushverma122/React-Architecture-Skill</text>
+  <rect x="345" y="50" width="270" height="70" rx="8" class="a"/>
+  <text x="359" y="74" class="h">2. Install the plugin</text>
+  <text x="359" y="98" class="m">/plugin install react-architecture</text>
+  <text x="359" y="112" class="m">@piyushverma122-plugins</text>
+  <rect x="660" y="50" width="270" height="70" rx="8" class="b"/>
+  <text x="674" y="74" class="h">3. Invoke</text>
+  <text x="674" y="98" class="m">/react-architecture:</text>
+  <text x="674" y="112" class="m">react-feature-architecture</text>
+  <path class="arrow" d="M300 85 L345 85"/><path class="arrow" d="M615 85 L660 85"/>
+
+  <text x="30" y="176" class="h" style="font-size:16px">B. Skills CLI</text>
+  <rect x="30" y="190" width="585" height="70" rx="8" class="a"/>
+  <text x="44" y="214" class="h">1. Install into the current project (copies to .claude/skills/)</text>
+  <text x="44" y="238" class="m">npx skills add Piyushverma122/React-Architecture-Skill</text>
+  <text x="44" y="252" class="m">  --skill react-feature-architecture -a claude-code</text>
+  <rect x="660" y="190" width="270" height="70" rx="8" class="b"/>
+  <text x="674" y="214" class="h">2. Invoke</text>
+  <text x="674" y="238" class="m">/react-feature-architecture</text>
+  <path class="arrow" d="M615 225 L660 225"/>
+  <text x="30" y="286" class="s">Use one method, not both. Restart Claude Code (or /reload-plugins) if the skill doesn't appear.</text>
+</svg>
