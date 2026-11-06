@@ -1,7 +1,7 @@
 {
   "name": "react-architecture",
   "displayName": "React Feature Architecture",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Set up, complete, or extend Vite + React apps (JS or TS) with a feature-based architecture: Tailwind v4, shadcn/ui, Redux Toolkit + RTK Query with single-flight token refresh, session restore, guarded routes with safe redirects, lazy routes with retry, react-hook-form + zod, sonner, and i18next.",
   "author": {
     "name": "Piyush Verma",
